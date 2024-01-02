@@ -1,9 +1,16 @@
-﻿bool closeProgram = false;
+﻿using DesignPatternsApp.Command;
+
+bool closeProgram = false;
+PatternInvoker patternInvoker = new PatternInvoker();
+
+Console.WriteLine("#################################################################");
+Console.WriteLine("Bem vindo ao debug de padrões de projetos mais usados do mercado!");
+Console.WriteLine("#################################################################");
+Console.WriteLine();
+Console.WriteLine("Antes de iniciar, me informe qual padrão de projeto deseja debugar:");
 
 while (!closeProgram)
 {
-    Console.WriteLine("Bem vindo ao debug de padrões de projetos mais usados do mercado!");
-    Console.WriteLine("Antes de iniciar, me informe qual padrão de projeto deseja debugar:");
     Console.WriteLine("Digite o código correspodente ao padrão desejado");
     Console.WriteLine("Criacionais");
     Console.WriteLine("[1] - Singleton");
@@ -15,17 +22,17 @@ while (!closeProgram)
     Console.WriteLine("[6] - Composite");
     Console.WriteLine("Criacionais");
     Console.WriteLine("[7] - Strategy");
-    Console.WriteLine("[8] - Command");
-    Console.WriteLine("[9] - Interator");
-    Console.WriteLine("[10] - Observer");
+    Console.WriteLine("[8] - Interator");
+    Console.WriteLine("[9] - Observer");
 
-    string? idPattern = Console.ReadLine();
-
+    string? patternId = Console.ReadLine();
+    patternInvoker.ExecuteCommand(patternId);
 
     Console.WriteLine("Deseja encerrar o estudo? [S] sim, [N] não");
     string? closeProgramResult = Console.ReadLine();
     if (!string.IsNullOrEmpty(closeProgramResult) && closeProgramResult.ToUpper() == "S")
         closeProgram = true;
+    else { Console.Clear(); }
 
 }
 
