@@ -1,5 +1,6 @@
 ﻿using DesignPatternsApp.Interfaces;
 using DesignPatternsApp.Patterns.AbstractFactory;
+using DesignPatternsApp.Patterns.FactoryMethod;
 using DesignPatternsApp.Patterns.Singleton;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace DesignPatternsApp.Command
         public PatternInvoker()
         {
             patternCommands.Add("1", new SingletonCommand());
-            //patternCommands.Add("2", new AbstractFactoryCommand());
+            patternCommands.Add("2", new FactoryMethodCommand());
             patternCommands.Add("3", new AbstractFactoryCommand());
         }
 

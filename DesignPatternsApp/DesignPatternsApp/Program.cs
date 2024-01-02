@@ -11,7 +11,8 @@ Console.WriteLine("Antes de iniciar, me informe qual padrão de projeto deseja d
 
 while (!closeProgram)
 {
-    Console.WriteLine("Digite o código correspodente ao padrão desejado");
+    Console.WriteLine("Digite o código correspodente ao padrão desejado"); 
+    Console.WriteLine("[0] - Para executar todos");
     Console.WriteLine("Criacionais");
     Console.WriteLine("[1] - Singleton");
     Console.WriteLine("[2] - Factory Method");
@@ -26,7 +27,11 @@ while (!closeProgram)
     Console.WriteLine("[9] - Observer");
 
     string? patternId = Console.ReadLine();
-    patternInvoker.ExecuteCommand(patternId);
+
+    if (!string.IsNullOrEmpty(patternId) && patternId.ToUpper() == "0")
+        patternInvoker.ExecuteAllCommand();
+    else
+        patternInvoker.ExecuteCommand(patternId);
 
     Console.WriteLine("Deseja encerrar o estudo? [S] sim, [N] não");
     string? closeProgramResult = Console.ReadLine();
