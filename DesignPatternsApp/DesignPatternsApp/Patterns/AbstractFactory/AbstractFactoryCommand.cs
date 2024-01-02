@@ -1,4 +1,6 @@
 ﻿using DesignPatternsApp.Interfaces;
+using DesignPatternsApp.Patterns.AbstractFactory.Factory;
+using DesignPatternsApp.Patterns.AbstractFactory.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +17,25 @@ namespace DesignPatternsApp.Patterns.AbstractFactory
             Console.WriteLine("Padrão AbstractFactory");
             Console.WriteLine("###############################");
             Console.WriteLine();
-            Console.WriteLine("Explicação: O Singleton é um padrão que garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso para essa instância.");
-            Console.WriteLine("Contexto: Jogo de futebol.");
+            Console.WriteLine("Explicação: Fornece uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas.");
+            Console.WriteLine("Contexto: Fábrica de carros.");
+            Console.WriteLine();
 
+            // Escolha a fábrica desejada
+            ICarFactory fordFactory = new FordFactory();
+            ICarFactory chevroletFactory = new ChevroletFactory();
+
+            // Crie carros usando as fábricas
+            ICar fordCar = fordFactory.CreateCar();
+            ICar chevroletCar = chevroletFactory.CreateCar();
+
+            Console.WriteLine("Carro Ford:");
+            Console.WriteLine($"Motor: {fordCar.CreateEngine().TypeEngine()}");
+            Console.WriteLine($"Pneu: {fordCar.CreateTire().TypeTire()}");
+
+            Console.WriteLine("\nCarro Chevrolet:");
+            Console.WriteLine($"Motor: {chevroletCar.CreateEngine().TypeEngine()}");
+            Console.WriteLine($"Pneu: {chevroletCar.CreateTire().TypeTire()}");
 
             Console.WriteLine();
         }
