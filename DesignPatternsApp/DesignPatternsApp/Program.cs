@@ -17,11 +17,11 @@ while (!closeProgram)
     Console.WriteLine("[1] - Singleton");
     Console.WriteLine("[2] - Factory Method");
     Console.WriteLine("[3] - Abstract Factory");
-    Console.WriteLine("Criacionais");
+    Console.WriteLine("Estruturais");
     Console.WriteLine("[4] - Facade");
     Console.WriteLine("[5] - Adapter");
     Console.WriteLine("[6] - Composite");
-    Console.WriteLine("Criacionais");
+    Console.WriteLine("Comportamentais");
     Console.WriteLine("[7] - Strategy");
     Console.WriteLine("[8] - Interator");
     Console.WriteLine("[9] - Observer");
