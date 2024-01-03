@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Patterns\Interator\" />
+    <Folder Include="Patterns\Observer\" />
+  </ItemGroup>
+
 </Project>

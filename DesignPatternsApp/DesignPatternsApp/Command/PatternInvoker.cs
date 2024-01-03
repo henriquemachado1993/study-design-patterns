@@ -5,11 +5,7 @@ using DesignPatternsApp.Patterns.Composite;
 using DesignPatternsApp.Patterns.Facade;
 using DesignPatternsApp.Patterns.FactoryMethod;
 using DesignPatternsApp.Patterns.Singleton;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DesignPatternsApp.Patterns.Strategy;
 
 namespace DesignPatternsApp.Command
 {
@@ -25,6 +21,9 @@ namespace DesignPatternsApp.Command
             patternCommands.Add("4", new FacadeCommand());
             patternCommands.Add("5", new AdapterCommand());
             patternCommands.Add("6", new CompositeCommand());
+            patternCommands.Add("7", new StrategyCommand());
+            //patternCommands.Add("8", new InteratorCommand());
+            //patternCommands.Add("9", new ObserverCommand());
         }
 
         public void ExecuteCommand(string? patternId)

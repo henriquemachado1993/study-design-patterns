@@ -1,7 +1,4 @@
 ﻿using DesignPatternsApp.Interfaces;
-using DesignPatternsApp.Patterns.Adapter.ExternalService;
-using DesignPatternsApp.Patterns.Adapter.Interfaces;
-using DesignPatternsApp.Patterns.Adapter.PaymentAdapter;
 using DesignPatternsApp.Patterns.Adapter.Printer;
 using System;
 using System.Collections.Generic;
