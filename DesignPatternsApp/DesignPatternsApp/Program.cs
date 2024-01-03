@@ -38,7 +38,6 @@ while (!closeProgram)
     if (!string.IsNullOrEmpty(closeProgramResult) && closeProgramResult.ToUpper() == "S")
         closeProgram = true;
     else { Console.Clear(); }
-
 }
 
 
