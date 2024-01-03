@@ -13,6 +13,7 @@ namespace DesignPatternsApp.Patterns.AbstractFactory
     {
         public void Execute()
         {
+            Console.Clear();
             Console.WriteLine("###############################");
             Console.WriteLine("Padrão AbstractFactory");
             Console.WriteLine("###############################");

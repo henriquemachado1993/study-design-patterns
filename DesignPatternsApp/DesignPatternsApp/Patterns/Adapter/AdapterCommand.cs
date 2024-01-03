@@ -14,6 +14,7 @@ namespace DesignPatternsApp.Patterns.Adapter
     {
         public void Execute()
         {
+            Console.Clear();
             Console.WriteLine("###############################");
             Console.WriteLine("Padrão Adapter");
             Console.WriteLine("###############################");

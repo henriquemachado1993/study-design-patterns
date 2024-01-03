@@ -11,6 +11,7 @@ namespace DesignPatternsApp.Patterns.Singleton
     {
         public void Execute()
         {
+            Console.Clear();
             Console.WriteLine("###############################");
             Console.WriteLine("Padrão Singleton");
             Console.WriteLine("###############################");

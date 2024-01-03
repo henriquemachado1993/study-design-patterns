@@ -13,6 +13,7 @@ namespace DesignPatternsApp.Patterns.FactoryMethod
     {
         public void Execute()
         {
+            Console.Clear();
             Console.WriteLine("###############################");
             Console.WriteLine("Padrão FactoryMethod");
             Console.WriteLine("###############################");

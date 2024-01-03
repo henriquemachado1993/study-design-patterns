@@ -12,6 +12,7 @@ namespace DesignPatternsApp.Patterns.Facade
     {
         public void Execute()
         {
+            Console.Clear();
             Console.WriteLine("###############################");
             Console.WriteLine("Padrão Facade");
             Console.WriteLine("###############################");
