@@ -15,7 +15,7 @@ Estruturais
 
 Comportamentais
 - **Strategy:**
-- **Command:**
+- **Command:** O command foi usado para orquestrar a execução de cada pattern no program.
 - **Iterator:**
 - **Observer:**
 
