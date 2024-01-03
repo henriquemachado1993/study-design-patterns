@@ -1,5 +1,6 @@
 ﻿using DesignPatternsApp.Interfaces;
 using DesignPatternsApp.Patterns.AbstractFactory;
+using DesignPatternsApp.Patterns.Facade;
 using DesignPatternsApp.Patterns.FactoryMethod;
 using DesignPatternsApp.Patterns.Singleton;
 using System;
@@ -19,6 +20,7 @@ namespace DesignPatternsApp.Command
             patternCommands.Add("1", new SingletonCommand());
             patternCommands.Add("2", new FactoryMethodCommand());
             patternCommands.Add("3", new AbstractFactoryCommand());
+            patternCommands.Add("4", new FacadeCommand());
         }
 
         public void ExecuteCommand(string? patternId)
