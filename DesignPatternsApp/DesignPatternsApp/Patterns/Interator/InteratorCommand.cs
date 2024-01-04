@@ -19,7 +19,7 @@ namespace DesignPatternsApp.Patterns.Interator
             Console.WriteLine("Padrão Interator");
             Console.WriteLine("###############################");
             Console.WriteLine();
-            Console.WriteLine("Explicação: O padrão Strategy permite definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis. Isso permite que o cliente escolha dinamicamente o algoritmo a ser usado em tempo de execução. Em outras palavras, você pode ter diferentes estratégias para realizar a mesma tarefa e alternar entre elas facilmente.");
+            Console.WriteLine("Explicação: O padrão Iterator é um padrão comportamental que fornece uma maneira de acessar sequencialmente os elementos de uma coleção sem expor a representação interna da coleção. Ele define uma interface comum para iteração e permite que vários tipos de coleções sejam percorridos de maneira uniforme.");
             Console.WriteLine("Contexto: Lista de Tarefas");
             Console.WriteLine();
 
