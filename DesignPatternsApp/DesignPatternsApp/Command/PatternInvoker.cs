@@ -4,6 +4,7 @@ using DesignPatternsApp.Patterns.Adapter;
 using DesignPatternsApp.Patterns.Composite;
 using DesignPatternsApp.Patterns.Facade;
 using DesignPatternsApp.Patterns.FactoryMethod;
+using DesignPatternsApp.Patterns.Interator;
 using DesignPatternsApp.Patterns.Singleton;
 using DesignPatternsApp.Patterns.Strategy;
 
@@ -22,7 +23,7 @@ namespace DesignPatternsApp.Command
             patternCommands.Add("5", new AdapterCommand());
             patternCommands.Add("6", new CompositeCommand());
             patternCommands.Add("7", new StrategyCommand());
-            //patternCommands.Add("8", new InteratorCommand());
+            patternCommands.Add("8", new InteratorCommand());
             //patternCommands.Add("9", new ObserverCommand());
         }
 
