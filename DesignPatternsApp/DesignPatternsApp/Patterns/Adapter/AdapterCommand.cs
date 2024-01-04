@@ -1,4 +1,5 @@
 ﻿using DesignPatternsApp.Interfaces;
+using DesignPatternsApp.Patterns.Adapter.Interfaces;
 using DesignPatternsApp.Patterns.Adapter.Printer;
 using System;
 using System.Collections.Generic;
@@ -21,14 +22,15 @@ namespace DesignPatternsApp.Patterns.Adapter
             Console.WriteLine("Contexto: Impressão de documentos em Impressora antiga.");
             Console.WriteLine();
 
-            // Sistema antigo usando a classe OldPrinter
+            // Criando uma instância da impressora antiga
             OldPrinter oldPrinter = new OldPrinter();
-            oldPrinter.PrintOld("Documento antigo");
 
-            // Integrando a classe ModernPrinter usando o adaptador
-            ModernPrinter modernPrinter = new ModernPrinter();
-            PrinterAdapter adapter = new PrinterAdapter(modernPrinter);
-            adapter.PrintOld("Documento adaptado para o novo sistema");
+            // Criando um adaptador para a impressora antiga
+            IModernPrinter adapter = new PrinterAdapter(oldPrinter);
+
+            // Utilizando o novo sistema de impressão com a impressora antiga através do adaptador
+            ModernPrinter modernSystem = new ModernPrinter(adapter);
+            modernSystem.PrintDocument("New document");
 
             Console.WriteLine();
         }

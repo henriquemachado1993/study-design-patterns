@@ -1,4 +1,5 @@
-﻿using DesignPatternsApp.Patterns.Adapter.Printer;
+﻿using DesignPatternsApp.Patterns.Adapter.Interfaces;
+using DesignPatternsApp.Patterns.Adapter.Printer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsApp.Patterns.Adapter
 {
-    public class PrinterAdapter : OldPrinter
+    public class PrinterAdapter : IModernPrinter
     {
-        private readonly ModernPrinter _modernPrinter;
+        private readonly OldPrinter _oldPrinter;
 
-        public PrinterAdapter(ModernPrinter modernPrinter)
+        public PrinterAdapter(OldPrinter oldPrinter)
         {
-            this._modernPrinter = modernPrinter;
+            _oldPrinter = oldPrinter;
         }
 
-        public new void PrintOld(string text)
+        public void Print(string document)
         {
-            _modernPrinter.Print(text);
+            _oldPrinter.PrintOld(document);
         }
     }
 }

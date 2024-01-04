@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatternsApp.Patterns.Adapter.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,9 @@ namespace DesignPatternsApp.Patterns.Adapter.Printer
 {
     public class OldPrinter
     {
-        public void PrintOld(string text)
+        public void PrintOld(string document)
         {
-            Console.WriteLine($"Imprimindo: {text}");
+            Console.WriteLine($"Imprimindo: {document}");
         }
     }
 }
