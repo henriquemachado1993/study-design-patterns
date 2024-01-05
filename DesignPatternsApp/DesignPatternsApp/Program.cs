@@ -1,6 +1,5 @@
 ﻿using DesignPatternsApp.Command;
 
-bool closeProgram = false;
 PatternInvoker patternInvoker = new PatternInvoker();
 
 Console.WriteLine("#################################################################");
@@ -9,7 +8,7 @@ Console.WriteLine("#############################################################
 Console.WriteLine();
 Console.WriteLine("Antes de iniciar, me informe qual padrão de projeto deseja debugar:");
 
-while (!closeProgram)
+while (true)
 {
     Console.WriteLine("Digite o código correspodente ao padrão desejado"); 
     Console.WriteLine("[0] - Para executar todos");
@@ -35,9 +34,11 @@ while (!closeProgram)
 
     Console.WriteLine("Deseja encerrar o estudo? [S] sim, [N] não");
     string? closeProgramResult = Console.ReadLine();
-    if (!string.IsNullOrEmpty(closeProgramResult) && closeProgramResult.ToUpper() == "S")
-        closeProgram = true;
-    else { Console.Clear(); }
+    
+    if (closeProgramResult?.ToUpper() == "S")
+        break;
+    else 
+        Console.Clear();
 }
 
 
